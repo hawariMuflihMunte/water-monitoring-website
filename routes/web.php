@@ -26,16 +26,24 @@ Route::controller(LoginController::class)->group(function () {
     Route::get('/logout', 'logout');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
-Route::resource('/dashboard/controls', DashboardHistoryController::class)->middleware('auth');
-Route::get('/dashboard/cetak', [DashboardHistoryController::class, 'cetak'])->middleware('auth');
+// Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+// Route::resource('/dashboard/controls', DashboardHistoryController::class)->middleware('auth');
+// Route::get('/dashboard/cetak', [DashboardHistoryController::class, 'cetak'])->middleware('auth');
 
-Route::get('/bacasuhu', [MonitoringController::class, 'bacasuhu'])->middleware('auth');
-Route::get('/bacakekeruhan', [MonitoringController::class, 'bacakekeruhan'])->middleware('auth');
-Route::get('/bacaph', [MonitoringController::class, 'bacaph'])->middleware('auth');
-Route::get('/bacado', [MonitoringController::class, 'bacado'])->middleware('auth');
-Route::get('/bacawaterpump', [MonitoringController::class, 'bacawaterpump'])->middleware('auth');
-Route::get('/bacaaerator', [MonitoringController::class, 'bacaaerator'])->middleware('auth');
+// Route::get('/bacasuhu', [MonitoringController::class, 'bacasuhu'])->middleware('auth');
+// Route::get('/bacakekeruhan', [MonitoringController::class, 'bacakekeruhan'])->middleware('auth');
+// Route::get('/bacaph', [MonitoringController::class, 'bacaph'])->middleware('auth');
+// Route::get('/bacado', [MonitoringController::class, 'bacado'])->middleware('auth');
+// Route::get('/bacawaterpump', [MonitoringController::class, 'bacawaterpump'])->middleware('auth');
+// Route::get('/bacaaerator', [MonitoringController::class, 'bacaaerator'])->middleware('auth');
+// // Route untuk menyimpan nilai sensor ke database
+// Route::get('/simpan/{temperature}/{turbidity}/{ph}/{dissolved_oxygen}/{water_pump}/{aerator}', [MonitoringController::class, 'simpan']);
 
-// Route untuk menyimpan nilai sensor ke database
-Route::get('/simpan/{temperature}/{turbidity}/{ph}/{dissolved_oxygen}/{water_pump}/{aerator}', [MonitoringController::class, 'simpan']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('home');
+
+Route::get('/bacasuhu', [MonitoringController::class, 'bacasuhu']);
+Route::get('/bacakekeruhan', [MonitoringController::class, 'bacakekeruhan']);
+Route::get('/bacaph', [MonitoringController::class, 'bacaph']);
+Route::get('/bacado', [MonitoringController::class, 'bacado']);
+Route::get('/bacawaterpump', [MonitoringController::class, 'bacawaterpump']);
+Route::get('/bacaaerator', [MonitoringController::class, 'bacaaerator']);

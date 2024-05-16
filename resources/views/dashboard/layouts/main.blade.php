@@ -13,8 +13,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
-    
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <title>Vanamei Monitoring | {{ $title }}</title>
 
@@ -23,7 +22,7 @@
     <link rel="manifest" href="manifest.json" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('img/iconWeb.png') }}" />
+    {{-- <link rel="icon" type="image/x-icon" href="{{ asset('img/iconWeb.png') }}" /> --}}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -67,8 +66,8 @@
         <!-- Layout container -->
         <div class="layout-page">
 
-         {{-- header --}}
-         @include('dashboard.layouts.header')
+        {{-- header --}}
+        {{-- @include('dashboard.layouts.header') --}}
 
           <!-- Content wrapper -->
           <div class="content-wrapper">
@@ -76,7 +75,7 @@
             @yield('container')
 
             {{-- footer --}}
-            @include('dashboard.layouts.footer')
+            {{-- @include('dashboard.layouts.footer') --}}
 
             <div class="content-backdrop fade"></div>
           </div>
