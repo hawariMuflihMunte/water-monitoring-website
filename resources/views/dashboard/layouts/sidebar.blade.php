@@ -1,6 +1,6 @@
 <!-- Sidebar -->
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-          <div class="app-brand demo">
+          {{-- <div class="app-brand demo">
             <a href="/dashboard" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <img src="{{ asset('img/iconWeb.png') }}" style="width: 30px;">
@@ -11,7 +11,7 @@
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
               <i class="bx bx-chevron-left bx-sm align-middle"></i>
             </a>
-          </div>
+          </div> --}}
 
           <div class="menu-inner-shadow"></div>
 
@@ -25,7 +25,7 @@
             </li>
 
             <!-- Layouts -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Data</span></li>
+            {{-- <li class="menu-header small text-uppercase"><span class="menu-header-text">Data</span></li>
             <li class="menu-item {{ Request::is('dashboard/*') ? 'active open' : '' }}">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
@@ -38,7 +38,7 @@
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> --}}
           </ul>
         </aside>
         <!-- / Sidebar -->
