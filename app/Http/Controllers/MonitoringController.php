@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Monitoring;
 use App\Http\Requests\StoreMonitoringRequest;
 use App\Http\Requests\UpdateMonitoringRequest;
+use GuzzleHttp\Psr7\Request;
 
 class MonitoringController extends Controller
 {
@@ -64,50 +65,37 @@ class MonitoringController extends Controller
         //
     }
 
-    public function bacasuhu()
+    public function pH()
     {
         $monitoring = Monitoring::select('*')->get();
-        return view('bacasuhu', ['monitoring' => $monitoring]);
+        return view('read-ph', ['monitoring' => $monitoring]);
     }
 
-    public function bacakekeruhan()
+    public function kelembabanTanah()
     {
         $monitoring = Monitoring::select('*')->get();
-        return view('bacakekeruhan', ['monitoring' => $monitoring]);
+        return view('read-kelembaban-tanah', ['monitoring' => $monitoring]);
     }
 
-    public function bacaph()
+    public function temperaturTanah()
     {
         $monitoring = Monitoring::select('*')->get();
-        return view('bacaph', ['monitoring' => $monitoring]);
+        return view('read-temperatur-tanah', ['monitoring' => $monitoring]);
     }
 
-    public function bacado()
-    {
-        $monitoring = Monitoring::select('*')->get();
-        return view('bacado', ['monitoring' => $monitoring]);
-    }
 
-    public function bacawaterpump()
+    public function kadarNutrisiTanah()
     {
         $monitoring = Monitoring::select('*')->get();
-        return view('bacawaterpump', ['monitoring' => $monitoring]);
-    }
-
-    public function bacaaerator()
-    {
-        $monitoring = Monitoring::select('*')->get();
-        return view('bacaaerator', ['monitoring' => $monitoring]);
+        return view('read-kadar-nutrisi-tanah', ['monitoring' => $monitoring]);
     }
 
     public function simpan () {
-        Monitoring::where ('id', 1)->update ([
-            'temperature' => request ('temperature'),
-            'turbidity' => request ('turbidity'),
+        Monitoring::where('id', 1)->update ([
             'ph' => request ('ph'),
-            'dissolved_oxygen' => request ('dissolved_oxygen'),
-            'water_pump' => request ('water_pump'),
-            'aerator' => request ('aerator'),
+            'kelembaban_tanah' => request ('kelembaban-tanah'),
+            'temperatur_tanah' => request ('temperatur-tanah'),
+            'kadar_nutrisi_tanah' => request ('kadar-nutrisi-tanah'),
         ]);
     }
 }

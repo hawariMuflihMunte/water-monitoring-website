@@ -41,9 +41,7 @@ Route::controller(LoginController::class)->group(function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('home');
 
-Route::get('/bacasuhu', [MonitoringController::class, 'bacasuhu']);
-Route::get('/bacakekeruhan', [MonitoringController::class, 'bacakekeruhan']);
-Route::get('/bacaph', [MonitoringController::class, 'bacaph']);
-Route::get('/bacado', [MonitoringController::class, 'bacado']);
-Route::get('/bacawaterpump', [MonitoringController::class, 'bacawaterpump']);
-Route::get('/bacaaerator', [MonitoringController::class, 'bacaaerator']);
+Route::get('/ph', [MonitoringController::class, 'pH']);
+Route::get('/kelembaban-tanah', [MonitoringController::class, 'kelembabanTanah']);
+Route::get('/temperatur-tanah', [MonitoringController::class, 'temperaturTanah']);
+Route::get('/kadar-nutrisi-tanah', [MonitoringController::class, 'kadarNutrisiTanah']);

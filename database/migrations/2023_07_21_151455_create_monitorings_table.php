@@ -13,12 +13,10 @@ return new class extends Migration
     {
         Schema::create('monitorings', function (Blueprint $table) {
             $table->id();
-            $table->decimal('temperature', 10, 2);
-            $table->decimal('turbidity', 10, 2);
             $table->decimal('ph', 10, 2);
-            $table->decimal('dissolved_oxygen', 10, 2);
-            $table->string('water_pump');
-            $table->string('aerator');
+            $table->decimal('kelembaban_tanah', 10, 2);
+            $table->decimal('temperatur_tanah', 10, 2);
+            $table->decimal('kadar_nutrisi_tanah', 10, 2);
             $table->timestamps();
         });
     }

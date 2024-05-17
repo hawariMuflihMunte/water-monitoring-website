@@ -12,10 +12,9 @@ class Monitoring extends Model
     protected $table = 'monitorings';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'temperature',
-        'turbidity',
         'ph',
-        'dissolved_oxygen',
-        'kualitas_air',
+        'kelembaban_tanah',
+        'temperatur_tanah',
+        'kadar_nutrisi_tanah',
     ];
 }

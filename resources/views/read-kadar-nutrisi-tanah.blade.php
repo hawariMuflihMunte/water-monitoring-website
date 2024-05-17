@@ -1,5 +1,5 @@
 <?php
     foreach ($monitoring as $data) {
-        echo $data->turbidity;
+        echo $data->kadar_nutrisi_tanah;
     }
 ?>
