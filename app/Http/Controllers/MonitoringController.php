@@ -111,3 +111,8 @@ class MonitoringController extends Controller
         ]);
     }
 }
+
+/**
+ * Hidroponik
+ * - 
+ */
