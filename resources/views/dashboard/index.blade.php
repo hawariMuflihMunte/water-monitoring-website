@@ -36,13 +36,41 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-8 order-1">
-        <div class="row align-items-stretch">
-
+      <div class="col-12 px-3 py-3">
+        <div class="bg-light shadow-sm rounded">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                    <th>Tanggal</th>
+                    <th>Pukul</th>
+                    <th>Suhu</th>
+                    <th>Keruh</th>
+                    <th>pH</th>
+                    <th>Oksigen</th>
+                    <th>Water Pump</th>
+                    <th>Aerator</th>
+                </tr>
+              </thead>
+              <tbody class="table-border-bottom-0">
+                @foreach ($controls as $control)
+                  <tr>
+                      <td>{{ $control->created_at->format('d M Y') }}</td>
+                      <td><strong>{{ $control->created_at->format('H:i') }}</strong></td>
+                      <td>{{ $control->temperature }}</td>
+                      <td>{{ $control->turbidity }}</td>
+                      <td>{{ $control->ph }}</td>
+                      <td>{{ $control->dissolved_oxygen }}</td>
+                      <td><span class="badge me-1 {{ $control->water_pump == 'off' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->water_pump }}</td>
+                      <td><span class="badge me-1 {{ $control->aerator == 'off' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->aerator }}</span></td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
+    </div>
   </div>
 
 @include('dashboard.realtime')

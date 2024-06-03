@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Monitoring;
 use Illuminate\Database\Seeder;
 
 class MonitoringSeeder extends Seeder
@@ -12,6 +12,13 @@ class MonitoringSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Monitoring::create([
+            'temperature' => 28.8,
+            'turbidity' => 90,
+            'ph' => 7.9,
+            'dissolved_oxygen' => 6.8,
+            'water_pump' => 'off',
+            'aerator' => 'off',
+        ]);
     }
 }
