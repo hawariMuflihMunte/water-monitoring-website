@@ -15,7 +15,7 @@
     />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-    <title>Monitoring | {{ $title }}</title>
+    <title>Monitoring IoT | {{ $title }}</title>
 
     <meta name="description" content="" />
 
