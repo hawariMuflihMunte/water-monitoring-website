@@ -15,7 +15,7 @@
     />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-    <title>Vanamei Monitoring | {{ $title }}</title>
+    <title>Monitoring | {{ $title }}</title>
 
     <meta name="description" content="" />
 
