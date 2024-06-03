@@ -38,8 +38,37 @@
           </div>
         </div>
       </div>
+      <div class="col-12 px-3 py-3 order-2">
+        <div class="bg-light shadow-sm rounded">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                    <th>Tanggal</th>
+                    <th>Pukul</th>
+                    <th>Suhu</th>
+                    <th>Keruh</th>
+                    <th>pH</th>
+                    <th>Oksigen</th>
+                </tr>
+              </thead>
+              <tbody class="table-border-bottom-0">
+                @foreach ($controls as $control)
+                  <tr>
+                      <td>{{ $control->created_at->format('d M Y') }}</td>
+                      <td><strong>{{ $control->created_at->format('H:i') }}</strong></td>
+                      <td>{{ $control->ph }}</td>
+                      <td>{{ $control->kelembaban_tanah }}</td>
+                      <td>{{ $control->temperatur_tanah }}</td>
+                      <td>{{ $control->kadar_nutrisi_tanah }}</td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
   </div>
-  {{ request('ph') }}
 
 @include('dashboard.realtime')
 <!-- / Content -->
