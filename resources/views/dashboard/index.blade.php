@@ -46,9 +46,9 @@
                 <tr>
                     <th>Tanggal</th>
                     <th>Pukul</th>
-                    <th>Suhu</th>
-                    <th>Keruh</th>
-                    <th>pH</th>
+                    <th>PH</th>
+                    <th>Kelembaban Tanah</th>
+                    <th>Temperatur Tanah</th>
                     <th>Oksigen</th>
                 </tr>
               </thead>
