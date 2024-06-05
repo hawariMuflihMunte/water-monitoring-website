@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('controls', function (Blueprint $table) {
             $table->id();
-            $table->float('ph_air', 10, 2);
-            $table->integer('suhu_air');
+            $table->float('ph');
+            $table->integer('suhu');
             $table->integer('tds');
             $table->enum('pompa', [
                 'on',

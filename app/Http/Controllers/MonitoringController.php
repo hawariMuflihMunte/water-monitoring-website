@@ -3,116 +3,44 @@
 namespace App\Http\Controllers;
 
 use App\Models\Monitoring;
-use App\Http\Requests\StoreMonitoringRequest;
-use App\Http\Requests\UpdateMonitoringRequest;
 
 class MonitoringController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreMonitoringRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Monitoring $monitoring)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Monitoring $monitoring)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateMonitoringRequest $request, Monitoring $monitoring)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Monitoring $monitoring)
-    {
-        //
-    }
-
-    public function bacasuhu()
+    public function suhu()
     {
         $monitoring = Monitoring::select('*')->get();
-        return view('bacasuhu', ['monitoring' => $monitoring]);
+        return view('suhu', ['monitoring' => $monitoring]);
     }
 
-    public function bacakekeruhan()
+    public function ph()
     {
         $monitoring = Monitoring::select('*')->get();
-        return view('bacakekeruhan', ['monitoring' => $monitoring]);
+        return view('ph', ['monitoring' => $monitoring]);
     }
 
-    public function bacaph()
+    public function tds()
     {
         $monitoring = Monitoring::select('*')->get();
-        return view('bacaph', ['monitoring' => $monitoring]);
+        return view('tds', ['monitoring' => $monitoring]);
     }
 
-    public function bacado()
+    public function pompa()
     {
         $monitoring = Monitoring::select('*')->get();
-        return view('bacado', ['monitoring' => $monitoring]);
-    }
-
-    public function bacawaterpump()
-    {
-        $monitoring = Monitoring::select('*')->get();
-        return view('bacawaterpump', ['monitoring' => $monitoring]);
-    }
-
-    public function bacaaerator()
-    {
-        $monitoring = Monitoring::select('*')->get();
-        return view('bacaaerator', ['monitoring' => $monitoring]);
+        return view('pompa', ['monitoring' => $monitoring]);
     }
 
     public function simpan () {
         Monitoring::where ('id', 1)->update ([
-            'temperature' => request ('temperature'),
-            'turbidity' => request ('turbidity'),
             'ph' => request ('ph'),
-            'dissolved_oxygen' => request ('dissolved_oxygen'),
-            'water_pump' => request ('water_pump'),
-            'aerator' => request ('aerator'),
+            'suhu' => request ('suhu'),
+            'tds' => request ('tds'),
+            'pompa' => request ('pompa'),
         ]);
     }
 }
 
 /**
  * Hidroponik
- * - 
+ * -
  */

@@ -11,7 +11,7 @@
                     <a href="/dashboard" class="btn btn-primary py-3 px-4 animated slideInDown">Mulai</a>
                 </div>
                 <div class="col-lg-6 animated fadeIn">
-                    <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="img/heroWeb.png" alt="">
+                    <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="img/heroWeb.jpg" alt="">
                 </div>
             </div>
         </div>

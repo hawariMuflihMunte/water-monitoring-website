@@ -7,35 +7,32 @@
       <div class="col-6 p-3">
         <div class="card h-100">
           <div class="card-body pb-4">
-            <h3 class="fw-semibold d-block mb-1 text-center">Suhu Air</h3>
-            <h3 id="suhu" class="card-title text-nowrap mb-2 bg-dark text-center text-white d-flex justify-content-center align-items-center rounded" style="height: 88%">0</h3>
+            <h3 class="fw-semibold d-block mb-1 text-center">Suhu</h3>
+            <hr>
+            <h3 class="card-title text-nowrap mb-2 bg-light text-center text-success d-flex justify-content-center align-items-center rounded" style="height: 75%; font-size: 400%"><span id="suhu">0</span>°C</h3>
           </div>
         </div>
       </div>
       <div class="col-6 p-3">
         <div class="card h-100">
           <div class="card-body pb-4">
-            <h3 class="fw-semibold d-block mb-1 text-center">Kekeruhan Air</h3>
-            <h3 id="kekeruhan" class="card-title text-nowrap mb-2 bg-dark text-center text-white d-flex justify-content-center align-items-center rounded" style="height: 88%">0</h3>
+            <h3 class="fw-semibold d-block mb-1 text-center">TDS</h3>
+            <hr>
+            <h3 class="card-title text-nowrap mb-2 bg-light text-center text-success d-flex justify-content-center align-items-center rounded" style="height: 75%; font-size: 400%"><span id="tds">0</span>&nbsp;ppm</h3>
           </div>
         </div>
       </div>
-      <div class="col-6 p-3">
+      <div class="col-2"></div>
+      <div class="col-8 p-3">
         <div class="card h-100">
           <div class="card-body pb-4">
-            <h3 class="fw-semibold d-block mb-1 text-center">pH Air</h3>
-            <h3 id="ph" class="card-title text-nowrap mb-2 bg-dark text-center text-white d-flex justify-content-center align-items-center rounded" style="height: 88%">0</h3>
+            <h3 class="fw-semibold d-block mb-1 text-center">PH</h3>
+            <hr>
+            <h3 class="card-title text-nowrap mb-2 bg-light text-center text-success d-flex justify-content-center align-items-center rounded" style="height: 75%; font-size: 400%"><span id="ph">0</span></h3>
           </div>
         </div>
       </div>
-      <div class="col-6 p-3">
-        <div class="card h-100">
-          <div class="card-body pb-4">
-            <h3 class="fw-semibold d-block mb-1 text-center">Oksigen Air</h3>
-            <h3 id="oksigen" class="card-title text-nowrap mb-2 bg-dark text-center text-white d-flex justify-content-center align-items-center rounded" style="height: 88%">0</h3>
-          </div>
-        </div>
-      </div>
+      <div class="col-2"></div>
       <div class="col-12 px-3 py-3">
         <div class="bg-light shadow-sm rounded">
           <div class="table-responsive">
@@ -45,11 +42,8 @@
                     <th>Tanggal</th>
                     <th>Pukul</th>
                     <th>Suhu</th>
-                    <th>Keruh</th>
-                    <th>pH</th>
-                    <th>Oksigen</th>
-                    <th>Water Pump</th>
-                    <th>Aerator</th>
+                    <th>PH</th>
+                    <th>TDS</th>
                 </tr>
               </thead>
               <tbody class="table-border-bottom-0">
@@ -57,12 +51,9 @@
                   <tr>
                       <td>{{ $control->created_at->format('d M Y') }}</td>
                       <td><strong>{{ $control->created_at->format('H:i') }}</strong></td>
-                      <td>{{ $control->temperature }}</td>
-                      <td>{{ $control->turbidity }}</td>
+                      <td>{{ $control->suhu }}°C</td>
                       <td>{{ $control->ph }}</td>
-                      <td>{{ $control->dissolved_oxygen }}</td>
-                      <td><span class="badge me-1 {{ $control->water_pump == 'off' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->water_pump }}</td>
-                      <td><span class="badge me-1 {{ $control->aerator == 'off' ? 'bg-label-danger' : 'bg-label-success' }}">{{ $control->aerator }}</span></td>
+                      <td>{{ $control->tds }} ppm</td>
                   </tr>
                 @endforeach
               </tbody>

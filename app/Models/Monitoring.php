@@ -9,7 +9,7 @@ class Monitoring extends Model
 {
     use HasFactory;
 
-    protected $table = 'monitorings';
+    protected $table = 'monitoring_hidroponiks';
     protected $primaryKey = 'id';
     protected $guarded = ['id'];
 }

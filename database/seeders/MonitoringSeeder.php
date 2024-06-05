@@ -13,9 +13,9 @@ class MonitoringSeeder extends Seeder
     public function run(): void
     {
         Monitoring::create([
-            'ph_air' => 7.7,
-            'suhu_air' => 9.1,
-            'tds' => 6.0,
+            'ph' => 5.77,
+            'suhu' => 20,
+            'tds' => 1500,
         ]);
     }
 }
