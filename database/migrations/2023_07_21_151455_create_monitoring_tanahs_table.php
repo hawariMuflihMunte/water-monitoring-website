@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('controls', function (Blueprint $table) {
+        Schema::create('monitoring_tanahs', function (Blueprint $table) {
             $table->id();
             $table->float('ph');
             $table->integer('kelembaban');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('controls');
+        Schema::dropIfExists('monitoring_tanahs');
     }
 };
