@@ -26,22 +26,11 @@ Route::controller(LoginController::class)->group(function () {
     Route::get('/logout', 'logout');
 });
 
-// Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
-// Route::resource('/dashboard/controls', DashboardHistoryController::class)->middleware('auth');
-// Route::get('/dashboard/cetak', [DashboardHistoryController::class, 'cetak'])->middleware('auth');
-
-// Route::get('/bacasuhu', [MonitoringController::class, 'bacasuhu'])->middleware('auth');
-// Route::get('/bacakekeruhan', [MonitoringController::class, 'bacakekeruhan'])->middleware('auth');
-// Route::get('/bacaph', [MonitoringController::class, 'bacaph'])->middleware('auth');
-// Route::get('/bacado', [MonitoringController::class, 'bacado'])->middleware('auth');
-// Route::get('/bacawaterpump', [MonitoringController::class, 'bacawaterpump'])->middleware('auth');
-// Route::get('/bacaaerator', [MonitoringController::class, 'bacaaerator'])->middleware('auth');
-// // Route untuk menyimpan nilai sensor ke database
-// Route::get('/simpan/{temperature}/{turbidity}/{ph}/{dissolved_oxygen}/{water_pump}/{aerator}', [MonitoringController::class, 'simpan']);
-
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('home');
 
-Route::get('/ph', [MonitoringController::class, 'pH']);
-Route::get('/kelembaban-tanah', [MonitoringController::class, 'kelembabanTanah']);
-Route::get('/temperatur-tanah', [MonitoringController::class, 'temperaturTanah']);
-Route::get('/kadar-nutrisi-tanah', [MonitoringController::class, 'kadarNutrisiTanah']);
+Route::get('/ph', [MonitoringController::class, 'ph']);
+Route::get('/kelembaban', [MonitoringController::class, 'kelembaban']);
+Route::get('/temperatur', [MonitoringController::class, 'temperatur']);
+Route::get('/nitrogen', [MonitoringController::class, 'nitrogen']);
+Route::get('/fosfor', [MonitoringController::class, 'fosfor']);
+Route::get('/kalium', [MonitoringController::class, 'kalium']);

@@ -14,7 +14,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Vanamei Monitoring | {{ $title }}</title>
+    <title>Monitoring IoT Nutrisi Tanah | {{ $title }}</title>
 
     <meta name="description" content="" />
 

@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\Monitoring;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,11 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Monitoring::create([
-            'ph' => 7.1,
-            'kelembaban_tanah' => 28.8,
-            'temperatur_tanah' => 20,
-            'kadar_nutrisi_tanah' => 6.8,
-        ]);
+        $this->call(UserSeeder::class);
+        $this->call(ControlSeeder::class);
+        $this->call(MonitoringSeeder::class);
     }
 }

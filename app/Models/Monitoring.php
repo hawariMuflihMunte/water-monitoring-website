@@ -9,12 +9,7 @@ class Monitoring extends Model
 {
     use HasFactory;
 
-    protected $table = 'monitorings';
+    protected $table = 'monitoring_tanahs';
     protected $primaryKey = 'id';
-    protected $fillable = [
-        'ph',
-        'kelembaban_tanah',
-        'temperatur_tanah',
-        'kadar_nutrisi_tanah',
-    ];
+    protected $guarded = ['id'];
 }
