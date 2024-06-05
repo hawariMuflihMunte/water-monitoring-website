@@ -11,11 +11,5 @@ class Monitoring extends Model
 
     protected $table = 'monitorings';
     protected $primaryKey = 'id';
-    protected $fillable = [
-        'temperature',
-        'turbidity',
-        'ph',
-        'dissolved_oxygen',
-        'kualitas_air',
-    ];
+    protected $guarded = ['id'];
 }

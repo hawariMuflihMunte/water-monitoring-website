@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('monitorings', function (Blueprint $table) {
+        Schema::create('monitoring_hidroponiks', function (Blueprint $table) {
             $table->id();
-            $table->decimal('temperature', 10, 2);
-            $table->decimal('turbidity', 10, 2);
-            $table->decimal('ph', 10, 2);
-            $table->decimal('dissolved_oxygen', 10, 2);
-            $table->string('water_pump');
-            $table->string('aerator');
+            $table->float('ph_air', 10, 2);
+            $table->integer('suhu_air');
+            $table->integer('tds');
+            $table->enum('pompa', [
+                'on',
+                'off',
+            ])->default('off');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('monitorings');
+        Schema::dropIfExists('monitoring_hidroponiks');
     }
 };

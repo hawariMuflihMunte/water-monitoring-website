@@ -13,12 +13,9 @@ class MonitoringSeeder extends Seeder
     public function run(): void
     {
         Monitoring::create([
-            'temperature' => 28.8,
-            'turbidity' => 90,
-            'ph' => 7.9,
-            'dissolved_oxygen' => 6.8,
-            'water_pump' => 'off',
-            'aerator' => 'off',
+            'ph_air' => 7.7,
+            'suhu_air' => 9.1,
+            'tds' => 6.0,
         ]);
     }
 }

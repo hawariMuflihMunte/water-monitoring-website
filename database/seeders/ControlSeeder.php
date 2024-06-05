@@ -13,12 +13,9 @@ class ControlSeeder extends Seeder
     public function run(): void
     {
         Control::create([
-            'temperature' => 9.8,
-            'turbidity' => 10.9,
-            'ph' => 8.2,
-            'dissolved_oxygen' => 9.0,
-            'water_pump' => 'on',
-            'aerator' => 'on',
+            'ph_air' => 7.7,
+            'suhu_air' => 9.1,
+            'tds' => 6.0,
         ]);
     }
 }

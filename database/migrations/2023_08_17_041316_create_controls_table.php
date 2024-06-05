@@ -13,18 +13,13 @@ return new class extends Migration
     {
         Schema::create('controls', function (Blueprint $table) {
             $table->id();
-            $table->decimal('temperature', 10, 2);
-            $table->decimal('turbidity', 10, 2);
-            $table->decimal('ph', 10, 2);
-            $table->decimal('dissolved_oxygen', 10, 2);
-            $table->enum('water_pump', [
+            $table->float('ph_air', 10, 2);
+            $table->integer('suhu_air');
+            $table->integer('tds');
+            $table->enum('pompa', [
                 'on',
-                'off'
-            ]);
-            $table->enum('aerator', [
-                'on',
-                'off'
-            ]);
+                'off',
+            ])->default('off');
             $table->timestamps();
         });
     }
